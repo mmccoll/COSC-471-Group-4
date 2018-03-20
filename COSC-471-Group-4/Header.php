@@ -1,16 +1,22 @@
 <?php
-echo '<p>this is my header</p>';
-?>
-<!--<html>
+echo '<html>
     <style>
-        header, td
+        #temp, td
         {
-            text-align: center;
             background-color: darkcyan;
             color: white;
         }
+        img
+        {
+            align: left;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+        }
     </style>
 	<header>
+        <div id="temp">
+        <img src="Jingjing Zhou\Logo.png"></img>
         <table align="center">
             <tr>
                 <td><a>Home&nbsp;&nbsp;</a></td>
@@ -19,5 +25,7 @@ echo '<p>this is my header</p>';
                 <td><a>Account&nbsp;&nbsp;</a></td>
             </tr>
         </table>
+        </div>
 	</header>
-</html>-->
+</html>';
+?>
