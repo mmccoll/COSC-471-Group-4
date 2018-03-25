@@ -1,10 +1,11 @@
 <?php
 echo '<html>
     <style>
-        #temp, td
+        #header, #links
         {
             background-color: darkcyan;
             color: white;
+            font-size: xx-large;
         }
         img
         {
@@ -15,9 +16,9 @@ echo '<html>
         }
     </style>
 	<header>
-        <div id="temp">
-        <img src="Jingjing Zhou\Logo.png"></img>
-        <table align="center">
+        <div id="header">
+        <img src="Images\Logo.png"></img>
+        <table align="center" id="links">
             <tr>
                 <td><a>Home&nbsp;&nbsp;</a></td>
                 <td><a>Inventory&nbsp;&nbsp;</a></td>
