@@ -1,17 +1,24 @@
 <?php
-echo '<p>this is my header</p>';
-?>
-<!--<html>
+echo '<html>
     <style>
-        header, td
+        #header, #links
         {
-            text-align: center;
             background-color: darkcyan;
             color: white;
+            font-size: xx-large;
+        }
+        img
+        {
+            align: left;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
         }
     </style>
 	<header>
-        <table align="center">
+        <div id="header">
+        <img src="Images\Logo.png"></img>
+        <table align="center" id="links">
             <tr>
                 <td><a>Home&nbsp;&nbsp;</a></td>
                 <td><a>Inventory&nbsp;&nbsp;</a></td>
@@ -19,5 +26,7 @@ echo '<p>this is my header</p>';
                 <td><a>Account&nbsp;&nbsp;</a></td>
             </tr>
         </table>
+        </div>
 	</header>
-</html>-->
+</html>';
+?>
