@@ -20,8 +20,7 @@ echo '<html>
         <img src="Images\Logo.png"></img>
         <table align="center" id="links">
             <tr>
-                <td><a>Home&nbsp;&nbsp;</a></td>
-                <td><a>Inventory&nbsp;&nbsp;</a></td>
+                <td><a href="Home.php">Home&nbsp;&nbsp;</a></td>
                 <td><a>Cart&nbsp;&nbsp;</a></td>
                 <td><a>Account&nbsp;&nbsp;</a></td>
             </tr>

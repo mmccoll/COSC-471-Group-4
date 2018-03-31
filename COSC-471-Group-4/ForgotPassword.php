@@ -1,7 +1,7 @@
 <html>
 <body>
     <h2 align="center">Account Recovery</h2>
-        <form action="EnterPassword.php" method="get">
+        <form action="EnterPassword.php" method="post">
             <table align="center">
                 <tr>
                     <td>Email:</td>
