@@ -49,7 +49,7 @@
             die("Connection failed: " . $conn->connect_error);
         } 
 
-        $sql = "select Password from user WHERE username='".$userName."'";
+        $sql = "select Password from users WHERE username='".$userName."'";
         $result = mysqli_query($conn, $sql);
         $row = $result->fetch_assoc();
         if($row["Password"]<>$currentPW){
@@ -75,7 +75,7 @@
             die("Connection failed: " . $conn->connect_error);
         } 
 
-        $sql = "UPDATE user SET ".$attribute."='".$value."' WHERE username='".$userName."'";
+        $sql = "UPDATE users SET ".$attribute."='".$value."' WHERE username='".$userName."'";
 
         if ($conn->query($sql) === TRUE) {
             echo "Record updated successfully".$sql;
