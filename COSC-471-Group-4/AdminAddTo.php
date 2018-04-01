@@ -53,7 +53,6 @@ $user = 'root';
         echo"Submit:   <input type='submit' name='booksub' value='ADD'><br>";
          break;
     case 'CHAIR':
-        echo"SerialNum:<input type='text' name='serialnumber'><br>";
         echo"Price($):    <input type='text' name='price'><br>";
         echo"Name:    <input type='text' name='name'><br>";
         echo"Company:  <input type='text' name='company'><br>";
@@ -65,7 +64,6 @@ $user = 'root';
         echo"Submit:   <input type='text' name='chairsub'value='ADD'><br>";
          break;
     case 'DESK':
-       echo"SerialNum:<input type='text' name='serialnumber'><br>";
         echo"Price($):    <input type='text' name='price'><br>";
         echo"Company:  <input type='text' name='company'><br>";
         echo"Name:    <input type='text' name='name'><br>";
@@ -78,7 +76,6 @@ $user = 'root';
         echo"Submit:     <input type='text' name='desksub' value='ADD'><br>";
          break;
     case 'LAPTOP':
-       echo"SerialNum:<input type='text' name='serialnumber'><br>";
         echo"Price($):    <input type='text' name='price'><br>";
         echo"Company:  <input type='text' name='company'><br>";
         echo"LaptopID:  <input type='text' name='laptopid'><br>";
@@ -92,7 +89,6 @@ $user = 'root';
         echo"Submit:    <input type='submit' name='laptopsub' value='ADD'><br>";
          break;
     case 'OTHER':
-        echo"SerialNum:<input type='text' name='serialnumber'><br>";
         echo"Price($):    <input type='text' name='price'><br>";
         echo"Company:  <input type='text' name='company'><br>";
         echo"Name:  <input type='text' name='name'><br>";

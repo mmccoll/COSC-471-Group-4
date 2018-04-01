@@ -7,6 +7,10 @@ echo "<!DOCTYPE html>
         <h1>Admin Page</h1>
     <body>";
 
+if(isset($_SESSION['error'])){
+            echo $_SESSION['error'];
+            unset($_SESSION['error']);
+        } 
 //connect to db:
  $user = 'root';
         $password = '';
