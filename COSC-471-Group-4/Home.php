@@ -57,6 +57,12 @@ if ($fromLoginPage == false)
 $sql = "SELECT * FROM USERS WHERE Username='" . $username . "' AND Password='" . $password . "'";
 $result = $dbs->query($sql);
 
+//check if admin or not:
+$row = $result->fetch_assoc();
+if($row['Is_admin'] == 'true'){
+    //if so, redirect to admin page:
+    header("Location: Admin.php");
+} // else: continue on as a user:
 $dbs->close();
 
 if($result->num_rows == 0)
