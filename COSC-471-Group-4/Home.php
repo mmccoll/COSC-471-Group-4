@@ -83,11 +83,11 @@ include 'Header.php';
 			<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post' name='item_type' >
 				<select name="Category">
 					<option value="SELECT">Select...</option>
-					<option value="BOOK">Books</option>
-					<option value="CHAIR">Chairs</option>
-					<option value="DESK">Desks</option>
-					<option value="LAPTOP">Laptops</option>
-					<option value="OTHERS">Others</option>
+					<option name= "BOOK" value="BOOK">Books</option>
+					<option name= "CHAIR" value="CHAIR">Chairs</option>
+					<option name= "DESK" value="DESK">Desks</option>
+					<option name= "LAPTOP" value="LAPTOP">Laptops</option>
+					<option name= "OTHERS" value="OTHERS">Others</option>
 				</select>
 	
 				<br />
@@ -117,7 +117,7 @@ include 'Header.php';
 				// output data of each row
 				while($row = $result->fetch_assoc()) {
 					echo "<tr><td>".$row["ISBN"]."</td><td>".$row["Author"]."</td><td>".$row["Title"]."</td><td>".
-							$row["Edition"]."</td><td>".$row["Rating"]."</td><td>".$row["Genre"]."</td><td>".$row["Publisher"]."</td><td><a href='AddToCart.php?id=".$row[ISBN]."&table=BOOK'>ADD</a></td></tr>";
+							$row["Edition"]."</td><td>".$row["Rating"]."</td><td>".$row["Genre"]."</td><td>".$row["Publisher"]."</td><td><a href='AddToCart.php?id=".$row["ISBN"]."&table=BOOK'>ADD</a></td></tr>";
 				}
 				echo "</table>";
 			}
@@ -133,7 +133,7 @@ include 'Header.php';
 				// output data of each row
 				while($row = $result->fetch_assoc()) {
 					echo "<tr><td>".$row["Chair_id"]."</td><td>".$row["Num_of_legs"]."</td><td>".$row["Num_of_wheels"]."</td><td>".
-							$row["Material"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row[Chair_id]."&table=CHAIR'>ADD</a></td></tr>";
+							$row["Material"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row["Chair_id"]."&table=CHAIR'>ADD</a></td></tr>";
 				}
 				echo "</table>";
 			}
@@ -149,7 +149,7 @@ include 'Header.php';
 				// output data of each row
 				while($row = $result->fetch_assoc()) {
 					echo "<tr><td>".$row["Desk_id"]."</td><td>".$row["Num_of_legs"]."</td><td>".$row["Num_of_drawers"]."</td><td>".
-							$row["Material"]."</td><td>".$row["Square_ft"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row[Desk_id]."&table=DESK'>ADD</a></td></tr>";
+							$row["Material"]."</td><td>".$row["Square_ft"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row["Desk_id"]."&table=DESK'>ADD</a></td></tr>";
 				}
 				echo "</table>";
 			}
@@ -166,7 +166,7 @@ include 'Header.php';
 				while($row = $result->fetch_assoc()) {
 					echo "<tr><td>".$row["Laptop_id"]."</td><td>".$row["Model"]."</td><td>".$row["Processor"]."</td><td>".
 							$row["HD_size"]."</td><td>".$row["RAM_size"]."</td><td>".$row["Year"].
-							"</td><td>"."</td><td>".$row["Screen_size"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row[Laptop_id]."&table=LAPTOP'>ADD</a></td></tr>";
+							"</td><td>"."</td><td>".$row["Screen_size"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row["Laptop_id"]."&table=LAPTOP'>ADD</a></td></tr>";
 				}
 				echo "</table>";
 			}
@@ -181,7 +181,7 @@ include 'Header.php';
 				echo "<table><tr><th>OTHERID</th><th>DESCRIPTION</th><th>ADD</th></tr>";
 				// output data of each row
 				while($row = $result->fetch_assoc()) {
-					echo "<tr><td>".$row["Others_id"].$row["Description"]."</td><td><a href='AddToCart.php?id=".$row[Others_id]."&table=OTHERS'>ADD</a></td></tr>";
+					echo "<tr><td>".$row["Others_id"].$row["Description"]."</td><td><a href='AddToCart.php?id=".$row["Others_id"]."&table=OTHERS'>ADD</a></td></tr>";
 				}
 				echo "</table>";
 			}
@@ -194,7 +194,6 @@ include 'Header.php';
         echo'</body></html>';
         
 
-		mysql_close($con);
 		?>
 		
 		
