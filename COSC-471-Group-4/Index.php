@@ -70,4 +70,3 @@ if ($result->num_rows == 0)
     </table>
 </body>
 </html>
-

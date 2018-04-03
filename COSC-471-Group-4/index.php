@@ -17,7 +17,7 @@ $dbs = new mysqli('localhost', $user, $password, $db) or die("Unable to connect 
 
 // USERS(Name, Address, Email, Username, Password, Is_Admin)
 
-$sql = "SELECT * FROM USERS WHERE Is_Admin='0'";
+$sql = "SELECT * FROM USERS WHERE Is_Admin='true'";
 
 $result = $dbs->query($sql);
 if ($result->num_rows == 0)
