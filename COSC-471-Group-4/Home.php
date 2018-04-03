@@ -66,7 +66,6 @@ else
     $_SESSION["username"] = $username;
     $_SESSION["password"] = $password;
     $_SESSION["loggedIn"] = true;
-    echo "welcome " . $username;
 }
 include 'Header.php';
 ?>
