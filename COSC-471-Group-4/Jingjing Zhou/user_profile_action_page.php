@@ -65,7 +65,7 @@
     function update_user_table($attribute,$value,$userName){
         $servername = "localhost";
         $username = "root";
-        $password = "12345";
+        $password = "";
         $dbname = "BOOKSTORE";
 
         // Create connection
