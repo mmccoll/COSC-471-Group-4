@@ -39,7 +39,7 @@
     function validate_current_password($currentPW,$userName){
         $servername = "localhost";
         $username = "root";
-        $password = "12345";
+        $password = "";
         $dbname = "BOOKSTORE";
 
         // Create connection

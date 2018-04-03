@@ -1,12 +1,12 @@
 <?php
 
-$con = mysqli_connect('localhost','root','12345','BOOKSTORE');
+$con = mysqli_connect('localhost','root','','BOOKSTORE');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 
 mysqli_select_db($con,"ajax_demo");
-$sql="SELECT * FROM user WHERE Username = 'jzhou6'";
+$sql="SELECT * FROM users WHERE Username = 'jzhou6'";
 $result = mysqli_query($con,$sql);
 
 while($row = mysqli_fetch_array($result)) {
