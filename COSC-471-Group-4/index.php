@@ -41,7 +41,7 @@ if ($result->num_rows == 0)
         <table align="center">
         <tr>
             <td>Username:</td>
-            <td><input required="required" type="text" name="username"/></td>
+            <td><input required="required" type="text" placeholder="bob" name="username"/></td>
         </tr>
         <tr>
             <td>Password:</td>

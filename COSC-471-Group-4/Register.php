@@ -19,15 +19,15 @@ $dbs = new mysqli('localhost', $user, $password, $db) or die("Unable to connect 
         <table align="center">
             <tr>
                 <td>Name:</td>
-                <td><input required="required" type="text" name="name" required="true"/></td>
+                <td><input required="required" placeholder="John Doe" type="text" name="name" required="true"/></td>
             </tr>
             <tr>
                 <td>Username:</td>
-                <td><input required="required" type="text" name="username" required="true"/></td>
+                <td><input required="required" type="text" placeholder="jdoe" name="username" required="true"/></td>
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><input required="required" type="email" name="email" required="true"/></td>
+                <td><input required="required" type="email" placeholder="jdoe@email.com" name="email" required="true"/></td>
             </tr>
             <tr>
                 <td>Password:</td>

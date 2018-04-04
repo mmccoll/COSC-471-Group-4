@@ -26,7 +26,7 @@ if ($fromLoginPage == false)
 {
     // create a user with first/last name, email, and password    
     $address = '';
-    $isAdmin = "0";
+    $isAdmin = "false";
     $email = $_POST["email"];
     $name = $_POST["name"];
     //$sql = "INSERT INTO USERS (firstname, lastname, email, password) VALUES ('John', 'Doe', 'john@example.com')";
@@ -49,10 +49,13 @@ if ($fromLoginPage == false)
 $sql = "SELECT * FROM USERS WHERE Username='" . $username . "' AND Password='" . $password . "'";
 $result = $dbs->query($sql);
 //check if admin or not:
+$_SESSION["isAdmin"] = false;
 $row = $result->fetch_assoc();
 if($row['Is_admin'] == 'true'){
     //if so, redirect to admin page:
     header("Location: Admin.php");
+    // add isAdmin to session for Header.php
+    $_SESSION["isAdmin"] = true;
 } // else: continue on as a user:
 $dbs->close();
 if($result->num_rows == 0)

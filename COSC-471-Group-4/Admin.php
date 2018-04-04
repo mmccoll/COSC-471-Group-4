@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'Header.php';
 echo "<!DOCTYPE html>
 <html> <head>
         <title>Admin Page</title>

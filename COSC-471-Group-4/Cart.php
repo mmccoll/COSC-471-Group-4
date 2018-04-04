@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'Header.php';
 echo '***This is a cart placeholder***';
 /* 
