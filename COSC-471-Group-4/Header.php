@@ -1,5 +1,7 @@
 <?php
-echo '<html>
+$username = $_SESSION["username"];
+
+$php = '<html>
     <style>
         #header, #links
         {
@@ -17,15 +19,17 @@ echo '<html>
     </style>
 	<header>
         <div id="header">
-        <img src="Images\Logo.png"></img>
-        <table align="center" id="links">
-            <tr>
-                <td><a href="Home.php">Home&nbsp;&nbsp;</a></td>
-                <td><a>Cart&nbsp;&nbsp;</a></td>
-                <td><a>Account&nbsp;&nbsp;</a></td>
-            </tr>
-        </table>
+            <div><img src="Images\Logo.png"></img>
+            <div align="right"><a href="Jingjing Zhou/UserProfile.html">hello ' . $username;
+$php .= '</a></div> 
+            <table align="center" id="links">
+                <tr>
+                    <td><a href="Home.php">Home</a>&nbsp;&nbsp;</td>
+                    <td><a href="Cart.php">Cart</a>&nbsp;&nbsp;</td>
+                </tr>
+            </table>
         </div>
 	</header>
 </html>';
+echo $php;
 ?>
