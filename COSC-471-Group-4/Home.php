@@ -207,10 +207,4 @@ include 'Header.php';
 		?>
 		
     </body>
-<<<<<<< HEAD
-=======
-<?php
-    include 'Footer.php';
-    ?>
->>>>>>> 7f8fe80a55e256fb9828b94b27b9941a59901a1d
 </html>
