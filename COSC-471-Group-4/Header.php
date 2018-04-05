@@ -22,10 +22,9 @@ $php = '<html>
     </style>
 	<header>
         <div id="header" >
-        
-            <div><img src="Images\Logo.png"></img>
-            <table align="right">
-                <tr><td><a href="UserProfile.php">hello ';
+            <img src="Images\Logo.png"></img>
+            <table align="right" style="font-size: xx-large;">
+                <tr><td><a href="UserProfile.php">Hello ';
 $php .= $username;
 $php .= '</a></td><td><a href="Index.php">Sign out</a></td></tr></table> 
             <table align="center" id="links">

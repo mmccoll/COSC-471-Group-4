@@ -106,5 +106,4 @@
         </div>
         <p id="txtHint" style="visibility: hidden;"></p>
     </body>
-    <?php include 'Footer.php';?>
 </html>

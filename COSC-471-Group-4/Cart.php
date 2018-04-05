@@ -8,5 +8,5 @@ echo '***This is a cart placeholder***';
  * and open the template in the editor.
  */
 
-include 'Footer.php';
+
 ?>
