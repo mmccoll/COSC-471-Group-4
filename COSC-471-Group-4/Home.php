@@ -123,7 +123,7 @@ include 'Header.php';
         //echo all tables and the ability to add new instances of the item to the tables.  
         //ADD button will take data to another page that will use sql to add items to the table:
 			
-		if ($_POST['value'] = "BOOK"){	
+		if ($_POST['name'] = "BOOK"){	
 			$sql = 'select * from BOOK;';
 			$result = $dbs->query($sql);
 			if ($result->num_rows > 0) {
@@ -138,7 +138,7 @@ include 'Header.php';
 			echo"<br>";
 		}
 		
-		if ($_POST['value'] = "CHAIR"){	
+		if ($_POST['name'] = "CHAIR"){	
 			//FROM CHAIR CHAIR:
 			$sql = 'select * from CHAIR;';
 			$result = $dbs->query($sql);
@@ -154,7 +154,7 @@ include 'Header.php';
 			echo"<br>";
 		}
 		
-		if ($_POST['value'] = "DESK"){	
+		if ($_POST['name'] = "DESK"){	
 			//FROM DESK DESK:
 			$sql = 'select * from DESK;';
 			$result = $dbs->query($sql);
@@ -170,7 +170,7 @@ include 'Header.php';
 			echo"<br>";
 		}
 		
-		if ($_POST['value'] = "LAPTOP"){	
+		if ($_POST['name'] = "LAPTOP"){	
 			//FROM DESK LAPTOP:
 			$sql = 'select * from LAPTOP;';
 			$result = $dbs->query($sql);
@@ -187,7 +187,7 @@ include 'Header.php';
 			echo"<br>";
 		}
 		
-		if ($_POST['value'] = "OTHERS"){	
+		if ($_POST['name'] = "OTHERS"){	
 			//FROM DESK OTHER:
 			$sql = 'select * from OTHERS;';
 			$result = $dbs->query($sql);
