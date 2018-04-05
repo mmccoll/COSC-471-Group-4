@@ -22,11 +22,11 @@ $user = 'root';
 $name = $_SESSION["username"];
 
 		
- $sql = "INSERT INTO CART (Username, Name, Serial_number, Price, Company) (".$name.", SELECT * FROM ITEM WHERE Id = ".$id.";";
+ $sql = "INSERT INTO CART (Cust_username, Name, Serial_number, Price, Company) (".$name.", SELECT * FROM ITEM WHERE Id = ".$id.";";
  $dbs->query($sql).";";
  
  
- 
+ /*
  if($table = "BOOK"){
  $sql = "DELETE FROM ".$table." WHERE ISBN = ".$id.";";
  }
@@ -43,7 +43,7 @@ $name = $_SESSION["username"];
  $sql = "DELETE FROM ".$table." WHERE Others_id = ".$id.";";
  } 
  $dbs->query($sql);
- 
+ */
  
  $sql = "DELETE FROM ITEM WHERE Serial_number = ".$id.";";
  $dbs->query($sql);
