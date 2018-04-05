@@ -22,7 +22,7 @@ $user = 'root';
 $name = $_SESSION["username"];
 
 		
- $sql = "INSERT INTO ".$name."CART (Name, Serial_number, Price, Company) SELECT * FROM ITEM WHERE Id = ".$id;
+ $sql = "INSERT INTO CART (Username, Name, Serial_number, Price, Company) (".$name.", SELECT * FROM ITEM WHERE Id = ".$id.";";
  $dbs->query($sql).";";
  
  
