@@ -207,6 +207,7 @@ include 'Header.php';
 		?>
 		
     </body>
+<?php
     include 'Footer.php';
     ?>
 </html>
