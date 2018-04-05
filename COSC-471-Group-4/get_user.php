@@ -1,4 +1,6 @@
 <?php
+// get the q parameter from URL
+$q = $_REQUEST["q"];
 
 $con = mysqli_connect('localhost','root','','BOOKSTORE');
 if (!$con) {
@@ -6,7 +8,7 @@ if (!$con) {
 }
 
 mysqli_select_db($con,"ajax_demo");
-$sql="SELECT * FROM users WHERE Username = 'jzhou6'";
+$sql="SELECT * FROM users WHERE Username = '".$q."';";
 $result = mysqli_query($con,$sql);
 
 while($row = mysqli_fetch_array($result)) {

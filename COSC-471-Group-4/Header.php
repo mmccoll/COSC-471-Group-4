@@ -25,7 +25,7 @@ $php = '<html>
         
             <div><img src="Images\Logo.png"></img>
             <table align="right">
-                <tr><td><a href="Jingjing Zhou/UserProfile.html">hello ';
+                <tr><td><a href="UserProfile.html">hello ';
 $php .= $username;
 $php .= '</a></td><td><a href="Index.php">Sign out</a></td></tr></table> 
             <table align="center" id="links">

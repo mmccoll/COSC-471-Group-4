@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<?php
-    include('Header.php');
->
+<html>
+    <?php session_start();?>
+    <?php include 'Header.php';?>
+
     <head>
     <title>User Profile</title>
     <style>
@@ -36,16 +37,17 @@
         <script type=text/javascript>
             function onLoadFun(){
                 //get username
-                var url=location.search,obj={};
-                var username;
-                if(url.indexOf("?")!=-1){
-                    var str = url.substr(1);
-                    var strs= str.split("&");
-                    for(var i=0;i<strs.length;i++){
-                        obj[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
-                    }
-                }
-                username = obj.name;
+                //var url=location.search,obj={};
+                //var username;
+                //if(url.indexOf("?")!=-1){
+                //    var str = url.substr(1);
+                //    var strs= str.split("&");
+                //    for(var i=0;i<strs.length;i++){
+                //        obj[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+                //    }
+                //}
+                //username = obj.name;
+                var username="<?php echo $_SESSION['username'];?>";
                 document.getElementById('in_username').value=username;
                 document.getElementById('label_UserName').innerHTML = "Username:  "+username;
 
@@ -104,6 +106,5 @@
         </div>
         <p id="txtHint" style="visibility: hidden;"></p>
     </body>
-<?php
-    include('Footer.php');
->
+    <?php include 'Footer.php';?>
+</html>
