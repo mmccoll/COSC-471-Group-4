@@ -1,19 +1,20 @@
 <?php
 session_start();
-echo"<!DOCTYPE html>
-<html> <head>
-        <title>Admin Add</title>
-    </head>
-        <h1>Admin Add Page</h1>
-    <body>";
-//retrieve items from adminpage:
-if(!isset($_GET['id']) || !isset($_GET['table'])){
+if(!isset($_GET['table'])){
 //retrieve values of user /pass: 
 //pass into header call to go right back to where we started:
 	Header("Location: Admin.php");
 }
-$id = $_GET['id'];
+//$id = $_GET['id'];
 $table = $_GET['table'];
+echo"<!DOCTYPE html>
+<html> <head>
+        <title>Admin Add</title>
+    </head>
+        <h1>Admin Add Page: ".$table."</h1>
+    <body>";
+//retrieve items from adminpage:
+
 //connect to db:
 $user = 'root';
         $password = '';
@@ -61,7 +62,7 @@ $user = 'root';
         echo"NumWheels:<input type='text' name='numwheels'><br>";
         echo"Material: <input type='text' name='material'><br>";
         echo"Color:    <input type='text' name='color'><br>";
-        echo"Submit:   <input type='text' name='chairsub'value='ADD'><br>";
+        echo"Submit:   <input type='submit' name='chairsub'value='ADD'><br>";
          break;
     case 'DESK':
         echo"Price($):    <input type='text' name='price'><br>";
@@ -73,7 +74,7 @@ $user = 'root';
         echo"Material:   <input type='text' name='material'><br>";
         echo"Square Feet:<input type='text' name='squarefeet'><br>";
         echo"Color:      <input type='text' name='color'><br>";
-        echo"Submit:     <input type='text' name='desksub' value='ADD'><br>";
+        echo"Submit:     <input type='submit' name='desksub' value='ADD'><br>";
          break;
     case 'LAPTOP':
         echo"Price($):    <input type='text' name='price'><br>";

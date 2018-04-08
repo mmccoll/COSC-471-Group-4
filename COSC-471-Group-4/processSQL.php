@@ -63,12 +63,12 @@ switch($var){
          if($dbs->query($sql)){ $bool1=true;}
         echo $sql." ";
         //insert into book table;
-        $sql = 'insert into DESK values('.$_GET['deskid'].', "'.$_GET['numlegs'].'", "'.$_GET['numdrawers'].'", '.$_GET['material'].', '.$_GET['squarefeet'].
+        $sql = 'insert into DESK values('.$_GET['deskid'].', '.$_GET['numlegs'].', '.$_GET['numdrawers'].', "'.$_GET['material'].'", '.$_GET['squarefeet'].
                 ', "'.$_GET['color'].'" );';
         if($dbs->query($sql)){$bool2=true;}
         echo $sql;
         break;
-     case 'desk':
+     case 'other':
         $sql = 'insert into item values("'.$_GET['name'].'", '.$_GET['otherid'].', '.$_GET['price'].', "'.$_GET['company'].'");';
          if($dbs->query($sql)){ $bool1=true;}
         echo $sql." ";
