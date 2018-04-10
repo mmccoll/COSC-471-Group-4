@@ -22,7 +22,7 @@ $user = 'root';
 $name = $_SESSION["username"];
 
 		
- $sql = "INSERT INTO CART (Cust_username, Name, Serial_number, Price, Company) (".$name.", SELECT * FROM ITEM WHERE Id = ".$id.";";
+ $sql = "INSERT INTO CART (Cust_username, Name, Item_Serial_number, Price, Company) (".$name.", SELECT * FROM ITEM WHERE Id = ".$id.";";
  $dbs->query($sql).";";
  
  
@@ -48,9 +48,6 @@ $name = $_SESSION["username"];
  $sql = "DELETE FROM ITEM WHERE Serial_number = ".$id.";";
  $dbs->query($sql);
 
-		
-
-    $dbs->close();
     ?>
 
   </html>
