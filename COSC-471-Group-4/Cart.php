@@ -48,7 +48,7 @@ $password = '';
         
         $dbs = new mysqli('localhost', $user, $password, $db) or die("Unable to connect with db.");*/
 		
-$name = $_SESSION["username"];  
+/*$name = $_SESSION["username"];  
 
  $sql = 'select * from CART;' ;
  $result = $dbs->query($sql);
@@ -57,7 +57,8 @@ $name = $_SESSION["username"];
  $otherEnd = "";
  
  echo"<h2>Cart Items</h2>";
-        echo "<table border='0.5'><tr><th>NAME</th><th>DESCRIPTION</th><th>PRICE</th>".$strt/*.$row['Others_id']*/.$otherEnd."</th></tr>";
+        echo "<table border='0.5'><tr><th>NAME</th><th>DESCRIPTION</th><th>PRICE</th>".$strt
+	//.$row['Others_id'].$otherEnd."</th></tr>";
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
@@ -69,6 +70,32 @@ $name = $_SESSION["username"];
  
  
  $dbs->query($sql);
+*/
+
+
+//connect to db:
+$user = 'root';
+$password = '';
+$db = 'BOOKSTORE';
+        
+$name = $_SESSION["username"];
+	
+//connects to database:
+$dbs = new mysqli('localhost', $user, $password, $db) or die("Unable to connect with db.");
+        			
+$sql = 'select * from ITEM where Cust_username = "'.$name.'";';	
+		
+echo "<table border= '1'><tr><th>Name</th><th>Serial Number</th><th>Price</th><th>Company</th><th>Remove</th></tr>";
+// output data of each row
+while($row = $result->fetch_assoc()) {
+	echo "<tr><td>".$row["Name"]."</td><td>".$row["Serial_number"]."</td><td>".$row["Price"]."</td><td>".$row["Company"]."</td><td><a href='Remove.php?id=".$row["Serial_number"]."'>REMOVE</a></td></tr>";
+}
+echo "</table>";
+				
+echo "<a href='MakeOrder.php'>Order</a>";
+
+
+
  $dbs->close();
 
         
