@@ -60,13 +60,6 @@ if ($result->num_rows == 0)
                 </a>
             </td>
         </tr>
-        <tr>
-            <td>
-                <a href='ForgotPassword.php'>
-            <p style="text-align:center">Forgot Password?</p>
-        </a>
-            </td>
-        </tr>
     </table>
 </body>
 </html>
