@@ -31,8 +31,9 @@ $php .= '</a></td><td><a href="Index.php">Sign out</a></td></tr></table>
                 <tr>';
 if ($isAdmin)
 {
-    $php .= '<td><a >Orders</a>&nbsp;&nbsp;</td>
-             <td><a >Inventory</a>&nbsp;&nbsp;</td>';
+    // add href Orders.php
+    $php .= '<td><a href="Home.php">Inventory</a>&nbsp;&nbsp;</td>
+            <td><a >Orders</a>&nbsp;&nbsp;</td>';
 }
 else
 {
