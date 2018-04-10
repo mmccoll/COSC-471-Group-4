@@ -94,7 +94,7 @@ include 'Header.php';
 		
 		
 			Pick a Category:
-			<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post' name='item_type' >
+			<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'  >
 				<select name="Category">
 					<option value="SELECT">Select...</option>
 					<option name= "BOOK" value="BOOK">Books</option>
@@ -123,7 +123,7 @@ include 'Header.php';
         //echo all tables and the ability to add new instances of the item to the tables.  
         //ADD button will take data to another page that will use sql to add items to the table:
 			
-		if ($_POST['name'] = "BOOK"){	
+		if (isset($_POST['Category']) && $_POST['Category'] == 'BOOK'){	
 			$sql = 'select * from BOOK;';
 			$result = $dbs->query($sql);
 			if ($result->num_rows > 0) {
@@ -134,71 +134,71 @@ include 'Header.php';
 							$row["Edition"]."</td><td>".$row["Rating"]."</td><td>".$row["Genre"]."</td><td>".$row["Publisher"]."</td><td><a href='AddToCart.php?id=".$row["ISBN"]."&table=BOOK'>ADD</a></td></tr>";
 				}
 				echo "</table>";
-			}
+                        } else {echo "table empty";}
 			echo"<br>";
 		}
 		
-		if ($_POST['name'] = "CHAIR"){	
+		else if (isset($_POST['Category']) && $_POST['Category'] == 'CHAIR'){	
 			//FROM CHAIR CHAIR:
 			$sql = 'select * from CHAIR;';
 			$result = $dbs->query($sql);
 			if ($result->num_rows > 0) {
-				echo "<table><tr><th>ChairID</th><th>NUM LEGS</th><th>NUM WHEELS</th><th>MATERIAL</th><th>COLOR</th><th>ADD</th></tr>";
+				echo "<table border='1'><tr><th>ChairID</th><th>NUM LEGS</th><th>NUM WHEELS</th><th>MATERIAL</th><th>COLOR</th><th>ADD</th></tr>";
 				// output data of each row
 				while($row = $result->fetch_assoc()) {
 					echo "<tr><td>".$row["Chair_id"]."</td><td>".$row["Num_of_legs"]."</td><td>".$row["Num_of_wheels"]."</td><td>".
 							$row["Material"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row["Chair_id"]."&table=CHAIR'>ADD</a></td></tr>";
 				}
 				echo "</table>";
-			}
+			 } else {echo "table empty";}
 			echo"<br>";
 		}
 		
-		if ($_POST['name'] = "DESK"){	
+		else if (isset($_POST['Category']) && $_POST['Category'] == 'DESK'){	
 			//FROM DESK DESK:
 			$sql = 'select * from DESK;';
 			$result = $dbs->query($sql);
 			if ($result->num_rows > 0) {
-				echo "<table><tr><th>DeskID</th><th>NUM LEGS</th><th>NUM DRAWERS</th><th>MATERIAL</th><th>SQRFT</th><th>COLOR</th><th>ADD</th></tr>";
+				echo "<table border='1'><tr><th>DeskID</th><th>NUM LEGS</th><th>NUM DRAWERS</th><th>MATERIAL</th><th>SQRFT</th><th>COLOR</th><th>ADD</th></tr>";
 				// output data of each row
 				while($row = $result->fetch_assoc()) {
 					echo "<tr><td>".$row["Desk_id"]."</td><td>".$row["Num_of_legs"]."</td><td>".$row["Num_of_drawers"]."</td><td>".
-							$row["Material"]."</td><td>".$row["Square_ft"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row["Desk_id"]."&table=DESK'>ADD</a></td></tr>";
+							$row["Material"]."</td><td>".$row["Square_feet"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row["Desk_id"]."&table=DESK'>ADD</a></td></tr>";
 				}
 				echo "</table>";
-			}
+			 } else {echo "table empty";}
 			echo"<br>";
 		}
 		
-		if ($_POST['name'] = "LAPTOP"){	
+		else if (isset($_POST['Category']) && $_POST['Category'] == 'LAPTOP'){	
 			//FROM DESK LAPTOP:
 			$sql = 'select * from LAPTOP;';
 			$result = $dbs->query($sql);
 			if ($result->num_rows > 0) {
-				echo "<table><tr><th>LaptopID</th><th>MODEL</th><th>PROCESSOR</th><th>HDD(GB)</th><th>RAM(GB)</th><th>YEAR</th><th>SCREEN SIZE</th><th>COLOR</th><th>ADD</th></tr>";
+				echo "<table border ='1'><tr><th>LaptopID</th><th>MODEL</th><th>PROCESSOR</th><th>HDD(GB)</th><th>RAM(GB)</th><th>YEAR</th><th>SCREEN SIZE</th><th>COLOR</th><th>ADD</th></tr>";
 				// output data of each row
 				while($row = $result->fetch_assoc()) {
 					echo "<tr><td>".$row["Laptop_id"]."</td><td>".$row["Model"]."</td><td>".$row["Processor"]."</td><td>".
 							$row["HD_size"]."</td><td>".$row["RAM_size"]."</td><td>".$row["Year"].
-							"</td><td>"."</td><td>".$row["Screen_size"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row["Laptop_id"]."&table=LAPTOP'>ADD</a></td></tr>";
+							"</td><td>".$row["Screen_size"]."</td><td>".$row["Color"]."</td><td><a href='AddToCart.php?id=".$row["Laptop_id"]."&table=LAPTOP'>ADD</a></td></tr>";
 				}
 				echo "</table>";
-			}
+			 } else {echo "table empty";}
 			echo"<br>";
 		}
 		
-		if ($_POST['name'] = "OTHERS"){	
+		else if (isset($_POST['Category']) && $_POST['Category'] == 'OTHERS'){	
 			//FROM DESK OTHER:
 			$sql = 'select * from OTHERS;';
 			$result = $dbs->query($sql);
 			if ($result->num_rows > 0) {
-				echo "<table><tr><th>OTHERID</th><th>DESCRIPTION</th><th>ADD</th></tr>";
+				echo "<table border='1'><tr><th>OTHERID</th><th>DESCRIPTION</th><th>ADD</th></tr>";
 				// output data of each row
 				while($row = $result->fetch_assoc()) {
-					echo "<tr><td>".$row["Others_id"].$row["Description"]."</td><td><a href='AddToCart.php?id=".$row["Others_id"]."&table=OTHERS'>ADD</a></td></tr>";
+					echo "<tr><td>".$row["Others_id"]."</td><td>".$row["Description"]."</td><td><a href='AddToCart.php?id=".$row["Others_id"]."&table=OTHERS'>ADD</a></td></tr>";
 				}
 				echo "</table>";
-			}
+			 } else {echo "table empty";}
 		}
 		
 		else{
