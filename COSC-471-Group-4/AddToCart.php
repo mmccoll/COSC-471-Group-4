@@ -47,6 +47,8 @@ $name = $_SESSION["username"];
  
  $sql = "DELETE FROM ITEM WHERE Serial_number = ".$id.";";
  $dbs->query($sql);
+	
+Header("Location: Home.php");
 
     ?>
 
