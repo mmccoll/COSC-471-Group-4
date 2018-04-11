@@ -84,6 +84,7 @@ $name = $_SESSION["username"];
 $dbs = new mysqli('localhost', $user, $password, $db) or die("Unable to connect with db.");
         			
 $sql = 'select * from CART where Cust_username = "'.$name.'";';	
+$result = $dbs->query($sql);
 		
 echo "<table border= '1'><tr><th>Username</th><th>Name</th><th>Serial Number</th><th>Price</th><th>Company</th><th>Remove</th></tr>";
 // output data of each row
