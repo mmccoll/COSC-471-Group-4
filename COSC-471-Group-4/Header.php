@@ -33,7 +33,7 @@ if ($isAdmin)
 {
     // add href Orders.php
     $php .= '<td><a href="Home.php">Inventory</a>&nbsp;&nbsp;</td>
-            <td><a >Orders</a>&nbsp;&nbsp;</td>';
+            <td><a href="orders.php">Orders</a>&nbsp;&nbsp;</td>';
 }
 else
 {

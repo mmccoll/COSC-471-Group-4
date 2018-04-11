@@ -19,15 +19,15 @@ $user = 'root';
         $dbs = new mysqli('localhost', $user, $password, $db) or die("Unable to connect with db.");
 		
 $name = $_SESSION["username"];
-
 		
  $sql = "INSERT INTO ITEM (Name, Serial_number, Price, Company) (SELECT * FROM CART WHERE Serial_number = ".$id." AND Cust_username = ".$name.");";
  $dbs->query($sql);
  
  
- $sql = "DELETE FROM CART WHERE Serial_number = ".$id." AND Cust_username = ".$name.";";
+ $sql = "DELETE FROM CART WHERE Item_Serial_number = ".$id." AND Cust_username = '".$name."';";
  $dbs->query($sql);
 
+ Header("Location: Cart.php");
     ?>
 
   </html>
