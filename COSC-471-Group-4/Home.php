@@ -31,25 +31,28 @@ if ($fromLoginPage == false)
     // create a user with first/last name, email, and password    
     $address = '';
     $isAdmin = "false";
-    $email = $_POST["email"];
-    $name = $_POST["name"];
+    if(isset($_POST['email']) && isset($_POST['name'])){
+        $email = $_POST["email"];
+        $name = $_POST["name"];
 
-    //$sql = "INSERT INTO USERS (firstname, lastname, email, password) VALUES ('John', 'Doe', 'john@example.com')";
-    // USERS(Name, Address, Email, Username, Password, Is_Admin)
-    $sql = "INSERT INTO USERS (Name, Address, Email, Username, Password, Is_Admin) VALUES ";
-    $sql .= "('" . $name . "', "; // name
-    $sql .= "'" . $address . "', "; // address
-    $sql .= "'" . $email . "', "; // email
-    $sql .= "'" . $username . "', "; // username
-    $sql .= "'" . $password . "', "; // password
-    $sql .= "'" . $isAdmin . "'"; // is_admin
-    $sql .= ")";
+        //$sql = "INSERT INTO USERS (firstname, lastname, email, password) VALUES ('John', 'Doe', 'john@example.com')";
+        // USERS(Name, Address, Email, Username, Password, Is_Admin)
+        $sql = "INSERT INTO USERS (Name, Address, Email, Username, Password, Is_Admin) VALUES ";
+        $sql .= "('" . $name . "', "; // name
+        $sql .= "'" . $address . "', "; // address
+        $sql .= "'" . $email . "', "; // email
+        $sql .= "'" . $username . "', "; // username
+        $sql .= "'" . $password . "', "; // password
+        $sql .= "'" . $isAdmin . "'"; // is_admin
+        $sql .= ")";
+        
+        if ($dbs->query($sql) !== TRUE) 
+        {
+            echo "Error: " . $sql . "<br>" . $dbs->error;
+        } 
+    }
+
     
-
-    if ($dbs->query($sql) !== TRUE) 
-    {
-        echo "Error: " . $sql . "<br>" . $dbs->error;
-    } 
 }
 
 
