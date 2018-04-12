@@ -23,7 +23,7 @@
       if($address<>"Key in your new address.")
           update_user_table("Adress",$address,$username);
       //jump back to userprofile pages
-       header("Location:UserProfile.html?name=".$username);
+       header("Location:UserProfile.php?name=".$username);
        exit;
     }
     
