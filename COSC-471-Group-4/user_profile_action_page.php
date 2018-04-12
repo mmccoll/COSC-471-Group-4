@@ -21,7 +21,7 @@
       if($customerName<>"Key in your new name.")
           update_user_table("Name",$customerName,$username);
       if($address<>"Key in your new address.")
-          update_user_table("Adress",$address,$username);
+          update_user_table("Address",$address,$username);
       //jump back to userprofile pages
        header("Location:UserProfile.php?name=".$username);
        exit;
